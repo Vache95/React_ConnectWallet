@@ -1,6 +1,7 @@
 import styled, { createGlobalStyle } from 'styled-components';
 
 export const Global = createGlobalStyle`
+
 * {
     padding: 0;
     margin: 0;
@@ -120,6 +121,7 @@ export const Wrapper = styled.div`
 	margin: 0px auto;
 	overflow: hidden;
 	display: flex;
+	flex-direction: column;
 	position: relative;
 `;
 

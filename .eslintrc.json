@@ -1,8 +1,43 @@
 {
-    "plugins": ["simple-import-sort", "prettier"],
-   "extends": ["react-app", "prettier"],
-   "rules": {
-     "simple-import-sort/imports": ["warn", {"groups": [["^next","^react","^pages","^components","^store","^utils","^helpers","^services","^hooks","^assets","^.+\\.s?css$"]]}],
-     "prettier/prettier": ["warn", {"printWidth":  100, "semi":  true, "jsxSingleQuote":  true, "singleQuote": true, "useTabs":  true, "arrowParens":  "avoid"}]    
-   }
+  "plugins": [
+    "simple-import-sort",
+    "prettier"
+  ],
+  "extends": [
+    "react-app",
+    "prettier"
+  ],
+  "rules": {
+    "simple-import-sort/imports": [
+      "warn",
+      {
+        "groups": [
+          [
+            "^next",
+            "^react",
+            "^pages",
+            "^components",
+            "^store",
+            "^utils",
+            "^helpers",
+            "^services",
+            "^hooks",
+            "^assets",
+            "^.+\\.s?css$"
+          ]
+        ]
+      }
+    ],
+    "prettier/prettier": [
+      "warn",
+      {
+        "printWidth": 100,
+        "semi": true,
+        "jsxSingleQuote": true,
+        "singleQuote": true,
+        "useTabs": true,
+        "arrowParens": "avoid"
+      }
+    ]
+  }
 }
