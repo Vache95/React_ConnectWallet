@@ -3,7 +3,6 @@ import Select from 'components/select';
 import { Buttons } from 'components/ui/button';
 import { selectWallet } from 'store/selector';
 import { connectThunk } from 'store/slices/thunk';
-// import { connectWallet } from 'store/slices/walletSlice';
 import Logos from 'assets/svg/Logo.svg';
 
 import { Headers, Logo } from './header';
