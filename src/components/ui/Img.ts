@@ -1,3 +1,14 @@
 import styled from 'styled-components';
 
-export const Img = styled.img``;
+interface ImgProps {
+	w?: string;
+	h?: string;
+	br?: string;
+}
+
+export const Img = styled.img<ImgProps>`
+	display: block;
+	width: ${props => props.w};
+	height: ${props => props.h};
+	border-radius: ${props => props.br};
+`;

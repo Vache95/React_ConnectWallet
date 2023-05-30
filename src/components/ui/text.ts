@@ -17,4 +17,5 @@ export const Text = styled.p<TextProps>`
 	color: ${props => props.color};
 	margin-left: ${props => props.ml};
 	margin-bottom: ${props => props.mb};
+
 `;
