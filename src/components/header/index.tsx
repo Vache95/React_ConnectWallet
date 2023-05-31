@@ -3,13 +3,15 @@ import Select from 'components/select';
 import { Buttons } from 'components/ui/button';
 import { selectWallet } from 'store/selector';
 import { connectThunk } from 'store/slices/thunk';
+// import { connectWallet } from 'store/slices/walletSlice';
 import Logos from 'assets/svg/Logo.svg';
 
 import { Headers, Logo } from './header';
+// import { ethers } from 'ethers';
 import { useAppDispatch } from 'hook/useDispatch';
 import { useAppSelector } from 'hook/useSelector';
 
-const Header = () => {
+const Header: React.FC = (): JSX.Element => {
 	const { wallet } = useAppSelector(selectWallet);
 	const dispatch = useAppDispatch();
 
@@ -21,9 +23,16 @@ const Header = () => {
 
 	useEffect(connectWallety(), []);
 
-	const connectWalletRequest = () => {
-		if (window.ethereum) {
+	const connectWalletRequest = async () => {
+		// const provider = new ethers.providers.Web3Provider(window.ethereum);
+		const provider = false;
+		if (!provider) {
 			dispatch(connectThunk());
+		} else if (provider) {
+			// await provider.send('eth_requestAccounts', []);
+			// const signer = provider.getSigner();
+			// const address = await signer.getAddress();
+			// dispatch(connectWallet(address));
 		} else {
 			alert('Install MetaMask extension!');
 		}
@@ -31,7 +40,7 @@ const Header = () => {
 
 	return (
 		<Headers>
-			<Logo src={Logos} alt='logo' />
+			<Logo src={Logos} />
 			{!wallet?.connect && <Buttons onClick={connectWalletRequest}>Connect</Buttons>}
 			{wallet?.connect && localStorage.getItem('token') && <Select />}
 		</Headers>

@@ -4,6 +4,7 @@ interface ImgProps {
 	w?: string;
 	h?: string;
 	br?: string;
+	cursors?: boolean;
 }
 
 export const Img = styled.img<ImgProps>`
@@ -11,4 +12,5 @@ export const Img = styled.img<ImgProps>`
 	width: ${props => props.w};
 	height: ${props => props.h};
 	border-radius: ${props => props.br};
+	${({ cursors }) => (cursors ? `cursor:poiner` : null)}
 `;
