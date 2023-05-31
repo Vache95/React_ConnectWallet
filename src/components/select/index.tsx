@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { Img } from 'components/ui/Img';
 import { Text } from 'components/ui/text';
 import { View } from 'components/ui/view';
