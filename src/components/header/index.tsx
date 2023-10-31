@@ -21,6 +21,7 @@ const Header: React.FC = (): JSX.Element => {
 		}
 	};
 
+	// eslint-disable-next-line react-hooks/exhaustive-deps
 	useEffect(connectWallety(), []);
 
 	const connectWalletRequest = async () => {
