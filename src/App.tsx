@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import Header from 'components/header';
 import { Mask } from 'components/mask';
 import { Container } from 'components/ui/container';
